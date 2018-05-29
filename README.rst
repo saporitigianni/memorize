@@ -80,7 +80,7 @@ This class extends the functools.lru_cache functionality to add timed caching an
     # If you want to implement caching aware rate limiting then use the following:
     # This will limit to no more than 10 calls for every 5 second period and if a
     # result is returned from the cache it does not count towards the 10 calls.
-    @memorize(calls=10, period=60, aware=True)
+    @memorize(calls=10, period=5, aware=True)
 
 
 Contributing
