@@ -50,12 +50,12 @@ This class extends the functools.lru_cache functionality to add timed caching an
  - When rate limiting, both the **calls** and **period** arguments must be provided otherwise an error is raised
 
 **Default Settings:**
- - timeout = None
- - maxsize = None
- - typed = False
- - calls = None
- - period = None
- - aware = False
+ - timeout = None (can be int or float)
+ - maxsize = None (can be int)
+ - typed = False (can be True)
+ - calls = None (can be int)
+ - period = None (can be int or float)
+ - aware = False (can be True)
 
 .. code:: python
 
@@ -73,12 +73,12 @@ This class extends the functools.lru_cache functionality to add timed caching an
     # without memorization
     fib(20)
 
-    # If you want to cache a maximum of 128 calls, separated by different types,
+    # If you want to cache a maximum of 128 calls, cached by different types,
     # each for 10 seconds use:
     @memorize(timeout=10, maxsize=128, typed=True)
 
     # If you want to implement caching aware rate limiting then use the following:
-    # This will limit to no more than 10 calls for every 60 second period and if a
+    # This will limit to no more than 10 calls for every 5 second period and if a
     # result is returned from the cache it does not count towards the 10 calls.
     @memorize(calls=10, period=60, aware=True)
 

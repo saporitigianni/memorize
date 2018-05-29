@@ -2,3 +2,7 @@
 .idea/
 virtualenv/
 .idea/vcs.xml
+memorize/__pycache__/__init__.cpython-36.pyc
+memorize/__pycache__/core.cpython-36.pyc
+dist/
+memorize.egg-info/

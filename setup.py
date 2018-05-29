@@ -8,8 +8,8 @@ def readme():
 
 
 MAJOR               = 0
-MINOR               = 0
-MICRO               = 1
+MINOR               = 1
+MICRO               = 0
 VERSION = '%d.%d.%d' % (MAJOR, MINOR, MICRO)
 
 
@@ -18,7 +18,7 @@ setup(name='memorize',
       description='A caching package with options for timed caching and caching aware rate limiting',
       long_description=readme(),
       classifiers=[
-          'Development Status :: 3 - Alpha',
+          'Development Status :: 4 - Beta',
           'Intended Audience :: Developers',
           'License :: OSI Approved :: BSD License',
           'Operating System :: OS Independent',
@@ -32,7 +32,8 @@ setup(name='memorize',
           'cache',
           'caching',
           'decorator',
-          'rate limit',
+          'rate-limit',
+          'timeout',
           'timer',
       ],
       url='https://github.com/saporitigianni/memorize',
